@@ -1,0 +1,7 @@
+make.inc
+int2
+fort.13
+*.a
+*.o
+*.mod
+*.mex*

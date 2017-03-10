@@ -1,0 +1,13 @@
+To compile mex file in MATLAB, use:
+
+mex -v -largeArrayDims COMPFLAGS='$COMPFLAGS -Wall' FOPTIMFLAGS='-O3' ...
+-I/path/to/include -L/path/to/lib ../src/prolate.f90 mexprolate.F90 ...
+-llapack -lblas -lprint -output prolcrea
+
+replacing /path/to/include and /path/to/lib with the appropriate include and
+library paths.
+
+Tip: compiler must be in your PATH inside MATLAB. If necessary, use the
+command:
+
+setenv('PATH', [getenv('PATH') ':/path/to/compiler']);

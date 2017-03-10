@@ -1,0 +1,2 @@
+LIBDIR     = /path/to/lib
+INCDIR     = /path/to/include
