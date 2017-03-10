@@ -6,4 +6,6 @@ This is a conversion of prolcrea.f and related codes (originally written by V. R
 - Link to LAPACK libraries
 - Take advantage of allocatable arrays in Fortran 90
 
+Note: depends on print library (see: https://github.com/dbeylkin/print)
+
 The conversion process is still ongoing...
