@@ -24,13 +24,11 @@ module prolatemod
   implicit none
   integer, parameter :: dp = SELECTED_REAL_KIND(15, 307)
   real, parameter :: eps = epsilon(1.0_dp)
+  real(dp), parameter :: done = 1
+  real(dp), parameter :: half = done/2
 
-  ! public/private variables
-  private :: eps, dp
-
-  ! public/private subroutines
-  public :: prolcrea
-  private :: prolmatr, prolcoef, prolpack
+  private
+  public prolcrea
 
 contains
 
@@ -138,9 +136,6 @@ contains
     real(dp), allocatable :: as(:), bs(:), cs(:), &
          zs1(:,:), zs2(:,:), work(:)
 
-    real(dp), parameter :: done = 1
-    real(dp), parameter :: half = done/2
-
     integer :: nvects, i, j, istore, ihigh
     integer :: infop = 0
 
@@ -232,8 +227,6 @@ contains
     logical, intent(in) :: ifsymm, ifodd
     real(dp), intent(out) :: as(*), bs(*), cs(*)
 
-    real(dp), parameter :: done = 1
-    real(dp), parameter :: half = done/2
     integer :: k, k0
     real(dp) :: alpha0, beta0, gamma0
 
@@ -278,7 +271,7 @@ contains
 
 
   !*****************************************************************************
-  ! prolcoef evaluates the Legendre coefficients
+  ! prolcoef evaluates the legendre coefficients
   ! alpha0, beta0, gamma0, alpha, beta, gamma of two functions:
   !
   !       (1-x**2)   P_k (x)  =

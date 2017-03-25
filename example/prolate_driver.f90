@@ -1,4 +1,4 @@
-program test
+program prolate_driver
   use prolatemod
   use printmod
   implicit none
@@ -18,4 +18,4 @@ program test
   call print('w size = ', size(w))
   call print('khi = ', khi(:))
 
-end program test
+end program prolate_driver
